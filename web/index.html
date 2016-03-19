@@ -4,21 +4,25 @@
         <!-- Set the website title -->
         <title>Room8</title>
 
-        <!-- Include bootstrap -->
-        <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        -->
-        <!-- Stylesheet for -->
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <!-- Set stylesheet -->
         <link rel="stylesheet" href="./css/home.css">
+
+        <!-- Load libraries -->
+        <script src='node_modules/es6-shim/se6-shim.min.js'></script>
+        <script src='node_modules/angular2/es6/dev/src/testing/shims_for_IT.js'></script>
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
+        <script src="node_modules/angular2/bundles/angular2-all.umd.js"></script>
+
+        <!-- Load modules -->
+        <script src='app/app.component.js'></script>
+        <script src='app/main.js'></script>
+
     </head>
 
     <body>
-
-        <div <span class="highlight">ng-include='"templates/header.html"'</span></div>
-
-        <!-- Include angularjs -->
-        <span class="highlight">
-            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
-        </span>
+        <my-app>Loading...</my-app>
     </body>
 </html>
