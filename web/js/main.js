@@ -142,7 +142,7 @@ $(document).ready( function(){
 
     for (var i = 0; i < billsList.length; i++) {
         $("#bills-table").append( "<tr><td>" + billsList[i].BillName + "</td>" +
-                                  "<td>" + billsList[i].PaymentTotal + "</td></tr>");
+                                  "<td>$" + billsList[i].PaymentTotal + "</td></tr>");
     }
 
     for (var i = 0; i < tenantsList.length; i++){
@@ -155,5 +155,27 @@ $(document).ready( function(){
             $(this).addClass("active");
         });
     }
+
+    data = {};
+    var financesList = [];
+    var xhr = $.ajax({
+        url: "/api/view/2",
+        data: data,
+        dataType: 'json',
+        async: false
+    });
+
+    xhr.success(function(data){
+        financesList = data;
+    });
+
+    for (var i = 0; i < financesList.length; i++) {
+        $("#finances-table").append(
+            "<tr><td>" + financesList[i].TenantName + "</td>" +
+            "<td>" + financesList[i].BillName + "</td>" +
+            "<td>" + financesList[i].IndividualPayment + "</td></tr>"
+        );
+    }
+
 
 });

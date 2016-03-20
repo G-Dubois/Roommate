@@ -21,4 +21,5 @@ router.get('/:id', function(req, res) {
 	});
 });
 
-
+// makes fies useable as module for app.use() in main node file
+module.exports = router;
