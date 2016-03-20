@@ -17,8 +17,7 @@
     <body>
         <!-- Main navigation menu bar-->
         <div class="menu-bar panel panel-default" id="main-menu-bar">
-            <ul class="nav nav-pills nav-justified pull-right">
-                <li><a href="calendar.html" id="link-calendar">Calendar</a></li>
+            <ul class="nav nav-pills nav-justified">
                 <li><a href="bills.html" id="link-bills">Bills</a></li>
                 <li><a href="roommates.html" id="link-roommates">Roommates</a></li>
                 <li class="active"><a href="index.html" id="link-home">Home</a></li>
@@ -26,14 +25,41 @@
         </div>
 
         <!-- Roommate list -->
-        <div class="col-md-2"></div>
-        <div class="panel panel-default col-md-8" id="panel-roommate-list">
-            <div class="panel-heading"><h3>Roommates</h3></div>
-            <div class="panel-body" id="roommate-list-container">
-                <ul class="list-group" id="roommate-list" data-role='listview' data-inset='true'></ul>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="panel panel-default col-md-8" id="panel-roommate-list">
+                <div class="panel-heading"><h3>Roommates</h3></div>
+                <div class="panel-body" id="roommate-list-container">
+                    <ul class="list-group" id="roommate-list" data-role='listview' data-inset='true'></ul>
+                </div>
             </div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="col-md-2"></div>
+
+        <!-- Bills list -->
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="panel panel-default col-md-8" id="panel-bills-list">
+                <div class="panel-heading"><h3>Bills</h3></div>
+                <div class="panel-body" id="bills-list-container">
+                    <table id="bills-table" style='width:100%'></table>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <!-- Finances table -->
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="panel panel-default col-md-8" id="panel-finances-list">
+                <div class="panel-heading"><h3>Household Finances</h3></div>
+                <div class="panel-body" id="finances-list-container">
+                    <table id="finances-table" style='width:100%'></table>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
 
 
         <!-- Load libraries -->

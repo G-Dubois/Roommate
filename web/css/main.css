@@ -9,6 +9,8 @@ body {
     background-color: #CFCFCF;
 }
 
+#panel-finances-list h3,
+#panel-bills-list h3,
 #panel-roommate-list h3 {
     color: #0F99FF;
     text-align: center;
