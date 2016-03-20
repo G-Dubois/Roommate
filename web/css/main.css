@@ -13,3 +13,7 @@ body {
     color: #0F99FF;
     text-align: center;
 }
+
+.nav-pills li {
+    padding: 8px;
+}
