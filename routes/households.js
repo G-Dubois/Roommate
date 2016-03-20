@@ -23,7 +23,7 @@ router.post('/', function (req, res) {
 // READ
 router.get('/', function(req, res) {
 	connection.query('SELECT * FROM Households', function (err, rows, fields) {
-		if (er) throw err;
+		if (err) throw err;
 		res.json(rows);
 	});
 });

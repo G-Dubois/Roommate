@@ -26,8 +26,8 @@ var billsRouter		= require('./routes/bills');
 
 // use router instances.   example: app.use('/api/table', routerFile);
 app.use('/api/households', householdsRouter);
-app.use('/api/tenants', tenantsRouters);
-app.use('/api/bills', billsRouters);
+app.use('/api/tenants', tenantsRouter);
+app.use('/api/bills', billsRouter);
 
 // app.use for all static files
 app.use(express.static('static'));
