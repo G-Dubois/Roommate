@@ -23,14 +23,22 @@ var router = express.Router();
 var householdsRouter 	= require('./routes/households');
 var tenantsRouter 	= require('./routes/tenants');
 var billsRouter		= require('./routes/bills');
+var financesRouter	= require('./routes/finances');
 
 // use router instances.   example: app.use('/api/table', routerFile);
 app.use('/api/households', householdsRouter);
 app.use('/api/tenants', tenantsRouter);
 app.use('/api/bills', billsRouter);
+app.use('/api/view', financesRouter);
 
 // app.use for all static files
-app.use(express.static('static'));
+app.use(express.static('web'));
+
+app.get('/', function(req, res){
+  res.render('./web/index', {
+    title: 'Home'
+  });
+});
 
 // start the server the server
 app.listen(port);

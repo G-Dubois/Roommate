@@ -32,7 +32,7 @@ router.get('/', function(req, res) {
 // UPDATE
 router.put('/:id', function (req, res) {
 	var Id = req.params.id;
-	connection.query('UPDATE Househoulds SET ?  WHERE HouseId = ' + Id, req.body, function(err, result){
+	connection.query('UPDATE Households SET ?  WHERE HouseId = ' + Id, req.body, function(err, result){
 	if (err) throw err;
 	var returnObject = {'updated':true}
 	res.json(returnObject);
