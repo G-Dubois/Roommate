@@ -1,0 +1,15 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #E0E0E0;
+}
+
+.menu-bar {
+    background-color: #CFCFCF;
+}
+
+#panel-roommate-list h3 {
+    color: #0F99FF;
+    text-align: center;
+}
