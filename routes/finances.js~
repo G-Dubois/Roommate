@@ -1,0 +1,25 @@
+// router for the households table
+
+// requires
+var express = require('express');
+var router = express.Router();
+var connection = require('../config/db');
+
+// require
+router.use(function(req, res, next) {
+	// this will be run before any endpoint function
+	next();
+});
+
+
+// GET FOR SINGLE ID
+router.get('/:id', function (req, res) {
+	var Id = req.params.id;
+	connection.query('SELECT * FROM HouseholdFinances WHERE HouseId = ' + Id, req.body, function(err, result){
+		if (err) throw err;
+		res.json(rows);
+	});
+});
+
+// makes fies useable as module for app.use() in main node file
+module.exports = router;
