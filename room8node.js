@@ -19,4 +19,29 @@ var port = process.env.PORT || 8080;
 // get an instance of the express Router
 var router = express.Router(); 
 
-// example: var tableRouter = require(./routes/table');
+// example: var tableRouter = require('./routes/table');
+var householdsRouter 	= require('./routes/households');
+var tenantsRouter 	= require('./routes/tenants');
+var billsRouter		= require('./routes/bills');
+var financesRouter	= require('./routes/finances');
+
+// use router instances.   example: app.use('/api/table', routerFile);
+app.use('/api/households', householdsRouter);
+app.use('/api/tenants', tenantsRouter);
+app.use('/api/bills', billsRouter);
+app.use('/api/view', financesRouter);
+
+// app.use for all static files
+app.use(express.static('web'));
+
+app.get('/', function(req, res){
+  res.render('./web/index', {
+    title: 'Home'
+  });
+});
+
+// start the server the server
+app.listen(port);
+console.log('Room8 server started. U wot m8.  Listening for connections on port' + port);
+
+

@@ -1,0 +1,2 @@
+CREATE OR REPLACE VIEW HouseholdFinances AS SELECT h.HouseId, h.Address, t.TenantId, t.LivingAtId, t.IsPrimary, t.BillPercentage, t.TenantName, b.BillId, b.ChargeToId, b.DayOfTheMonth, b.PaymentTotal, (b.PaymentTotal*t.BillPercentage) as IndividualPayment, b.BillName, b.CompanyName FROM Households h JOIN Tenants t on h.HouseId = t.LivingAtId JOIN Bills b on h.HouseId = b.ChargeToId;
+
